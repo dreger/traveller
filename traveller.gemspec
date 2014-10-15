@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'traveller'
-  s.version     = '0.0.003'
+  s.version     = '0.0.005'
   s.date        = '2014-10-08'
   s.summary     = "Find that location."
   s.description = "Traveller parses location-based strings and exposes their city, state, zip code, latitude, and longitude. NOTE: Latitude and Longitude support is coming."
@@ -12,4 +12,3 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
   s.add_development_dependency "rspec"
 end
-

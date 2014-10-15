@@ -1,27 +1,27 @@
 require 'spec_helper'
 
 RSpec.describe Traveller do
-	describe "parsing a whole address" do 
-		before(:each) do 
+	describe "parsing a whole address" do
+		before(:each) do
 			@result = Traveller.new("north canton, oh 44720")
 		end
-		 
-		it "parses the zip" do 
+
+		it "parses the zip" do
 			expect(@result.zip).to eq("44720")
-		end 
-		
-		it "parses the city" do 
+		end
+
+		it "parses the city" do
 			expect(@result.city).to eq("north canton")
-		end 
-		
-		it "parses the state" do 
+		end
+
+		it "parses the state" do
 			expect(@result.state).to eq("ohio")
-		end 
-		
-		it "parses the state abbreviation" do 
+		end
+
+		it "parses the state abbreviation" do
 			expect(@result.state_abbreviation).to eq("oh")
-		end 
-	end 
+		end
+	end
 
   describe "parsing zip codes" do
     it 'parses a simple zip' do
@@ -39,8 +39,27 @@ RSpec.describe Traveller do
       expect(result.zip).to eq(nil)
     end
   end
-  
-  describe "parsing a city" do 
+
+	describe 'parsing a non-existant zip code' do
+		inputs = {
+			"1" => nil,
+			"12" => nil,
+			"123" => nil,
+			"1234" => nil,
+			"12345" => "12345",
+			"123456" => nil,
+			"1234567" => nil,
+			"12345-1234" => "12345"
+		}
+		inputs.each do |input, expected|
+			it "correctly parses the zip #{input}" do
+				result = Traveller.new(input.dup)
+				expect(result.zip).to eq(expected)
+			end
+		end
+	end
+
+  describe "parsing a city" do
   	city_inputs = {
       "new york, new york 12345" => "new york",
       "north canton ohio 12345" => "north canton",
@@ -52,8 +71,8 @@ RSpec.describe Traveller do
       "oh" => "",
       "ny" => "",
       "canton" => "canton"
-    } 
-  	
+    }
+
   	city_inputs.each do |input, expected|
       it "should return the city of #{expected}" do
         result = Traveller.new(input.dup)
@@ -76,7 +95,7 @@ RSpec.describe Traveller do
       "texas" => "texas",
       "oh" => "ohio",
       "ny" => "new york"
-    } 
+    }
 
     full_state_inputs.each do |input, expected|
       it "should return full state name of #{expected}" do
@@ -84,7 +103,7 @@ RSpec.describe Traveller do
         expect(result.state).to eq(expected)
       end
     end
-    
+
     abbreviated_state_inputs = {
       "new york, new york 12345" => "ny",
       "new york new york 12345" => "ny",
@@ -99,7 +118,7 @@ RSpec.describe Traveller do
       "oh" => "oh",
       "ny" => "ny"
     }
-    
+
     abbreviated_state_inputs.each do |input, expected|
       it "should return full state name of #{expected}" do
         result = Traveller.new(input.dup)

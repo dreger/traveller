@@ -23,7 +23,7 @@ class Traveller
   end
 
   def parse_zip
-    zip = @input[/[0-9]{5}/]
+    zip = @input[/\b([0-9]{5})\b/]
     @input.sub!(zip, '') unless zip.nil?
     @zip = zip
   end

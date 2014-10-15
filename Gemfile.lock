@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    traveller (0.0.003)
+    traveller (0.0.005)
 
 GEM
   remote: https://rubygems.org/
