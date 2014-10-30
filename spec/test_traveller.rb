@@ -66,6 +66,7 @@ RSpec.describe Traveller do
       "north canton, ohio 12345" => "north canton",
       "altlanta ga" => "altlanta",
       "austin texas" => "austin",
+			"portland or" => "portland",
       "austin tx" => "austin",
       "texas" => "",
       "oh" => "",
