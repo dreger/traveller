@@ -38,3 +38,8 @@ traveller.state_abbreviation
 Traveller supports many different types of inputs, and you can check out the tests to see what works.
 
 _Note: latitude and longitude support is coming._
+
+# Release notes
+
+**0.0.007 release ("Bond, James Bond")**  
+This update fixes an issue where `albany ny` would be parsed as `city: alban`, where Traveller stripped the `ny` off the end. Updated the regex to only strip words with spaces before and after the target word. 
