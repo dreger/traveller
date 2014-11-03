@@ -34,15 +34,15 @@ class Traveller
     abbreviations = ['al', 'ak', 'az', 'ar', 'ca', 'co', 'ct', 'de', 'dc', 'fl', 'ga', 'hi', 'id', 'il', 'in', 'ia', 'ks', 'ky', 'la', 'me', 'md', 'ma', 'mi', 'mn', 'ms', 'mo', 'mt', 'ne', 'nv', 'nh', 'nj', 'nm', 'ny', 'nc', 'nd', 'oh', 'ok', 'or', 'pa', 'pr', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'vt', 'va', 'wa', 'wv', 'wi', 'wy']
 	  input_tokens = @input.split
 
+    abbreviations.each { |state|
+      assign_state_and_abbriviation(state) and return if input_tokens.include?(state)
+    }
+
     multi_word_states.each { |state|
       assign_state_and_abbriviation(state) and return if @input.include?(state)
     }
 
     single_word_states.each { |state|
-	    assign_state_and_abbriviation(state) and return if input_tokens.include?(state)
-    }
-
-    abbreviations.each { |state|
 	    assign_state_and_abbriviation(state) and return if input_tokens.include?(state)
     }
   end

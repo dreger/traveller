@@ -69,7 +69,9 @@ RSpec.describe Traveller do
 			"portland or" => "portland",
       "austin tx" => "austin",
       "texas" => "",
+			"oklahoma city ok" => "oklahoma city",
       "oh" => "",
+			"virginia beach va" => "virginia beach",
       "ny" => "",
       "canton" => "canton"
     }
@@ -91,11 +93,13 @@ RSpec.describe Traveller do
       "north canton oh" => "ohio",
       "new york ny" => "new york",
       "altlanta ga" => "georgia",
+			"oklahoma city ok" => "oklahoma",
       "austin texas" => "texas",
       "austin tx" => "texas",
       "texas" => "texas",
       "oh" => "ohio",
-      "ny" => "new york"
+      "ny" => "new york",
+			"virginia beach va" => "virginia"
     }
 
     full_state_inputs.each do |input, expected|
