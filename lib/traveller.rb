@@ -30,7 +30,7 @@ class Traveller
 
   def parse_state_and_abbreviation
     single_word_states = ['alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana',  'nebraska', 'nevada', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'wisconsin', 'wyoming']
-    multi_word_states = ['district of columbia', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'puerto rico', 'rhode island', 'south carolina', 'south daktoa', 'west virginia' ]
+    multi_word_states = ['district of columbia', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina', 'north dakota', 'puerto rico', 'rhode island', 'south carolina', 'south dakota', 'west virginia' ]
     abbreviations = ['al', 'ak', 'az', 'ar', 'ca', 'co', 'ct', 'de', 'dc', 'fl', 'ga', 'hi', 'id', 'il', 'in', 'ia', 'ks', 'ky', 'la', 'me', 'md', 'ma', 'mi', 'mn', 'ms', 'mo', 'mt', 'ne', 'nv', 'nh', 'nj', 'nm', 'ny', 'nc', 'nd', 'oh', 'ok', 'or', 'pa', 'pr', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'vt', 'va', 'wa', 'wv', 'wi', 'wy']
 	  input_tokens = @input.split
 

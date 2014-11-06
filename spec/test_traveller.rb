@@ -99,7 +99,8 @@ RSpec.describe Traveller do
       "texas" => "texas",
       "oh" => "ohio",
       "ny" => "new york",
-			"virginia beach va" => "virginia"
+			"virginia beach va" => "virginia",
+			"south dakota" => "south dakota"
     }
 
     full_state_inputs.each do |input, expected|
