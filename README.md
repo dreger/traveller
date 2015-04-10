@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/kyledreger/traveller.svg)](https://travis-ci.org/kyledreger/traveller)
+
 # Traveller
 
 Traveller is a gem that lets you easily parse strings for location attributes. A simple example:
