@@ -1,1 +1,3 @@
-bundle exec rspec spec/test_traveller.rb
+rvm:
+    - "2.1.5"
+bundle exec rspec "./spec/test_traveller.rb"
