@@ -1,4 +1,4 @@
 rvm:
   - 2.1.5
 install: bundle
-script: "bundle exec rspec"
+script: "bundle exec rspec ./spec/test_traveler.rb"
