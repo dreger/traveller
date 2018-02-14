@@ -44,5 +44,8 @@ _Note: latitude and longitude support is coming._
 
 # Release notes
 
+**0.0.010 release ("Stet")**  
+Updated references to GitHub after changing my username. 
+
 **0.0.007 release ("Bond, James Bond")**  
 This update fixes an issue where `albany ny` would be parsed as `city: alban`, where Traveller stripped the `ny` off the end. Updated the regex to only strip words with spaces before and after the target word. 

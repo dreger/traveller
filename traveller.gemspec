@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'traveller'
-  s.version     = '0.0.009'
-  s.date        = '2014-10-30'
+  s.version     = '0.0.010'
+  s.date        = '2018-02-14'
   s.summary     = "Find that location."
   s.description = "Traveller parses location-based strings and exposes their city, state, zip code, latitude, and longitude. NOTE: Latitude and Longitude support is coming."
   s.authors     = ["K.Q. Dreger"]
