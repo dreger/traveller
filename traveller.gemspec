@@ -7,8 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["K.Q. Dreger"]
   s.email       = 'comments@dreger.me'
   s.files       = ["lib/traveller.rb"]
-  s.homepage    =
-    'https://github.com/dreger/traveller'
-  s.license       = 'MIT'
+  s.homepage    = 'https://github.com/dreger/traveller'
+  s.license     = 'MIT'
   s.add_development_dependency "rspec"
 end
